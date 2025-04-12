@@ -1,5 +1,4 @@
 import { getCourseUnitById } from "@/lib/api"
-import Header from "@/components/header"
 import { notFound } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"

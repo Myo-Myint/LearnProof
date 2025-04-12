@@ -1,11 +1,5 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+const config = {
+  allowedDevOrigins: [`https://3001-idx-learnproof2-1744474580231.cluster-rz2e7e5f5ff7owzufqhsecxujc.cloudworkstations.dev`],
 };
 
-const config = {
-    ...nextConfig,
-    allowedDevOrigins: ['https://3000-idx-learnproof-1744472678597.cluster-qtqwjj3wgzff6uxtk26wj7fzq6.cloudworkstations.dev']
-}
 export default config;

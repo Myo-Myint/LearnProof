@@ -2,14 +2,13 @@ import Link from "next/link";
 import {
   IconBrain,
   IconArrowRight,
-  IconSparkles,
-  IconBook,
   IconWallet,
   IconInbox,
 } from "@tabler/icons-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+
 export default function Home() {
   return (
     <div className="flex flex-col">

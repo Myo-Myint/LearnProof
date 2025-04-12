@@ -2,7 +2,6 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
-=======
 
 :root {
   --background: #ffffff;
@@ -125,7 +124,6 @@
   body {
     @apply bg-background text-foreground;
   }
-=======
 }
 
 @media (prefers-color-scheme: dark) {

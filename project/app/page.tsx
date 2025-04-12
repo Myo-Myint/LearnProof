@@ -1,4 +1,3 @@
-import Link from "next/link";
 import {
   IconBrain,
   IconArrowRight,
@@ -37,8 +36,13 @@ function Hero() {
         </div>
       </div>
       <div className="basis-1/2 overflow-hidden">
-        <AspectRatio ratio={1/1} className="w-full">
-          <Image src="/working.png" alt="man_working" fill className="w-full h-full object-cover" />
+        <AspectRatio ratio={1 / 1} className="w-full">
+          <Image
+            src="/working.png"
+            alt="man_working"
+            fill
+            className="w-full h-full object-cover"
+          />
         </AspectRatio>
       </div>
     </div>
@@ -54,32 +58,28 @@ function Features() {
         </div>
         <h3 className="text-xl font-bold">AI-Powered Learning</h3>
         <p className="text-gray-500 w-2/3">
-          Our advanced AI generates personalized learning content based
-          on your specific interests and goals.
+          Our advanced AI generates personalized learning content based on your
+          specific interests and goals.
         </p>
       </div>
       <div className="flex flex-col items-center text-center space-y-4">
         <div className="bg-primary/30 rounded-full w-fit h-fit p-2">
           <IconWallet className="h-6 w-6 text-primary" />
         </div>
-        <h3 className="text-xl font-bold">
-          Blockchain Integration
-        </h3>
+        <h3 className="text-xl font-bold">Blockchain Integration</h3>
         <p className="text-gray-500 w-2/3">
-          Your learning progress and achievements are securely stored on
-          the Solana blockchain.
+          Your learning progress and achievements are securely stored on the
+          Solana blockchain.
         </p>
       </div>
       <div className="flex flex-col items-center text-center space-y-4">
         <div className="bg-primary/30 rounded-full w-fit h-fit p-2">
           <IconInbox className="h-6 w-6 text-primary" />
         </div>
-        <h3 className="text-xl font-bold">
-          Structured Roadmaps
-        </h3>
+        <h3 className="text-xl font-bold">Structured Roadmaps</h3>
         <p className="text-gray-500 w-2/3">
-            Our advanced AI generates personalized learning content based
-            on your specific interests and goals.
+          Our advanced AI generates personalized learning content based on your
+          specific interests and goals.
         </p>
       </div>
     </div>

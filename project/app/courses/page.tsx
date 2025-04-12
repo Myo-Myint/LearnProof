@@ -1,20 +1,28 @@
-import { getCourses } from "@/lib/api"
-import  Header from "@/components/header"
-import Link from "next/link"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Clock, BookOpen, ArrowRight } from "lucide-react"
+import { getCourses } from "@/lib/api";
+import Link from "next/link";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Clock, BookOpen, ArrowRight } from "lucide-react";
 
 export default async function CoursesPage() {
-  const courses = await getCourses()
+  const courses = await getCourses();
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-black to-purple-950">
-
       <main className="container py-8">
         <div className="mb-8">
-          <h1 className="text-4xl font-bold text-white mb-2">Discover Courses</h1>
-          <p className="text-purple-300">Learn, prove your knowledge, and level up your skills</p>
+          <h1 className="text-4xl font-bold text-white mb-2">
+            Discover Courses
+          </h1>
+          <p className="text-purple-300">
+            Learn, prove your knowledge, and level up your skills
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -27,16 +35,27 @@ export default async function CoursesPage() {
                   </div>
                 </div>
                 <CardHeader className="p-4">
-                  <CardTitle className="text-white line-clamp-2">{course.title}</CardTitle>
+                  <CardTitle className="text-white line-clamp-2">
+                    {course.title}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent className="p-4 pt-0">
-                  <p className="text-purple-300 text-sm line-clamp-3 mb-4">{course.summary}</p>
+                  <p className="text-purple-300 text-sm line-clamp-3 mb-4">
+                    {course.summary}
+                  </p>
                   <div className="flex flex-wrap gap-2">
-                    <Badge variant="outline" className="bg-purple-950/50 text-purple-300 border-purple-700">
+                    <Badge
+                      variant="outline"
+                      className="bg-purple-950/50 text-purple-300 border-purple-700"
+                    >
                       {course.level}
                     </Badge>
                     {course.tags.slice(0, 2).map((tag, i) => (
-                      <Badge key={i} variant="outline" className="bg-cyan-950/50 text-cyan-300 border-cyan-700">
+                      <Badge
+                        key={i}
+                        variant="outline"
+                        className="bg-cyan-950/50 text-cyan-300 border-cyan-700"
+                      >
                         {tag}
                       </Badge>
                     ))}
@@ -57,5 +76,5 @@ export default async function CoursesPage() {
         </div>
       </main>
     </div>
-  )
+  );
 }

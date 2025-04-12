@@ -1,5 +1,5 @@
 import { getCourseById } from "@/lib/api"
-import  Header from "@/components/header"
+import Header from "@/components/header"
 import { notFound } from "next/navigation"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -57,25 +57,31 @@ export default async function CourseDetailPage({ params }: { params: { id: strin
                 <h2 className="text-xl font-semibold text-white mb-4">Course Content</h2>
 
                 <div className="space-y-3">
-                  {[1, 2, 3, 4].map((section) => (
-                    <div
-                      key={section}
-                      className="flex items-center p-3 rounded-md bg-purple-950/30 border border-purple-900/30"
+                  {course.units.map((unit) => (
+                    <Link
+                      key={unit.id}
+                      href={`/courses/${course.id}/units/${unit.id}`}
+                      className="flex items-center p-3 rounded-md bg-purple-950/30 border border-purple-900/30 hover:bg-purple-900/30 transition-colors"
                     >
                       <div className="h-8 w-8 rounded-full bg-purple-900/50 flex items-center justify-center mr-3">
-                        <span className="text-white text-sm">{section}</span>
+                        <span className="text-white text-sm">{unit.order}</span>
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-white font-medium">
-                          Section {section}:{" "}
-                          {["Introduction", "Core Concepts", "Advanced Topics", "Practical Application"][section - 1]}
-                        </h3>
-                        <p className="text-purple-300 text-sm">Learn about the fundamentals and key concepts</p>
+                        <h3 className="text-white font-medium">{unit.title}</h3>
+                        <p className="text-purple-300 text-sm">
+                          {unit.title.toLowerCase().includes("introduction")
+                            ? "Introduction to key concepts"
+                            : unit.title.toLowerCase().includes("knowledge check")
+                              ? "Test your knowledge"
+                              : unit.title.toLowerCase().includes("summary")
+                                ? "Review what you've learned"
+                                : "Learn about key concepts and principles"}
+                        </p>
                       </div>
                       <Badge variant="outline" className="bg-cyan-950/50 text-cyan-300 border-cyan-700">
-                        {Math.floor(course.duration / 4)} min
+                        {Math.floor(course.duration / course.units.length)} min
                       </Badge>
-                    </div>
+                    </Link>
                   ))}
                 </div>
               </div>

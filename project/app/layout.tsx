@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from "@/components/footer";
 import { UserProvider } from "@/lib/user-context";
 import Header from "@/components/header";
+import { WalletConProvider } from "@/components/providers/WalletConnectionProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -26,7 +27,9 @@ export default function RootLayout({
       <html lang="en">
         <body className={`${inter} antialiased`}>
           <Header />
-          <main className="min-h-screen">{children}</main>
+            <WalletConProvider>
+                <main className="min-h-screen">{children}</main>
+            </WalletConProvider> 
           <Footer />
         </body>
       </html>

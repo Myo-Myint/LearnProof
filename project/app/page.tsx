@@ -21,7 +21,7 @@ function Hero() {
   return (
     <div className="flex gap-4 px-20 lg:px-40 py-20 lg:py-30 items-center">
       <div className="flex flex-col gap-4 basis-1/2">
-        <h1 className="text-2xl lg:text-4xl font-bold">
+        <h1 className="text-2xl lg:text-4xl font-bold text-white">
           Learn Anything with AI-Powered Roadmaps on Blockchain
         </h1>
         <p className="text-md lg:text-xl text-muted-foreground">
@@ -53,7 +53,7 @@ function Features() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 px-20 lg:px-40 py-20 lg:py-30">
       <div className="flex flex-col items-center text-center space-y-4">
-        <div className="bg-primary/30 rounded-full w-fit h-fit p-2">
+        <div className="   bg-primary/30 rounded-full w-fit h-fit p-2">
           <IconBrain className="h-6 w-6 text-primary" />
         </div>
         <h3 className="text-xl font-bold">AI-Powered Learning</h3>

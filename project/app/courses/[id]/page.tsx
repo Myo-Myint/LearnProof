@@ -15,7 +15,7 @@ export default async function CourseDetailPage({ params }: { params: { id: strin
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-black to-purple-950">
+    <div className="min-h-screen bg-gradient-to-b from-black to-purple-950 flex item-center justify-center">
 
       <main className="container py-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -44,7 +44,7 @@ export default async function CourseDetailPage({ params }: { params: { id: strin
 
                 {course.url && (
                   <Link href={course.url} target="_blank" rel="noopener noreferrer">
-                    <Button variant="outline" className="border-purple-700 text-white hover:bg-purple-900/30">
+                    <Button className=" bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700">
                       <ExternalLink className="h-4 w-4 mr-2" />
                       Open on Microsoft Learn
                     </Button>

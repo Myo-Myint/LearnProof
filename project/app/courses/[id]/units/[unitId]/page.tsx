@@ -18,7 +18,7 @@ export default async function UnitPage({ params }: { params: { id: string; unitI
   const nextUnit = unitIndex < course.units.length - 1 ? course.units[unitIndex + 1] : null
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-black to-purple-950">
+    <div className="min-h-screen bg-gradient-to-b from-black to-purple-950 flex item-center justify-center">
 
       <main className="container py-8">
         <div className="mb-6">
@@ -86,7 +86,7 @@ export default async function UnitPage({ params }: { params: { id: string; unitI
           </div>
 
           <div className="lg:col-span-1">
-            <Card className="bg-black/40 border-purple-900/50 sticky top-20">
+            <Card className="bg-black/40 border-purple-900/50 sticky top-20 text-white">
               <CardContent className="p-6">
                 <div className="text-center mb-6">
                   <div className="h-16 w-16 mx-auto bg-gradient-to-r from-purple-600 to-cyan-600 rounded-full flex items-center justify-center mb-3">

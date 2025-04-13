@@ -8,9 +8,9 @@ export default async function CoursesPage() {
   const courses = await getCourses()
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-black to-purple-950">
+    <div className="min-h-screen bg-gradient-to-b from-black to-purple-950 flex item-center justify-center">
 
-      <main className="container py-8">
+      <main className="container py-8 flex-col items-center justify-center">
         <div className="mb-8">
           <h1 className="text-4xl font-bold text-white mb-2">Discover Courses</h1>
           <p className="text-purple-300">Learn, prove your knowledge, and level up your skills</p>
